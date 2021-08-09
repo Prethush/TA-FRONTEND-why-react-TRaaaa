@@ -33,7 +33,11 @@ function elm(type, attr={}, ...children) {
     for(let key in attr) {
         if(key.startsWith('data-')) {
             element.setAttribute(key, attr[key]);
-        }else{
+        }else if(key.startsWith('on')){
+            let eventName = key.slice(2);
+            element.addEventListener(eventName, attr[key]);
+        }
+        else{
             element[key] = attr[key];
         }
     }
@@ -63,18 +67,18 @@ function createMovieUI(){
         }, movie.name),
         elm("button", {
             id: i,
-            className: 'bg-black text-white p-1'
+            className: 'bg-black text-white p-1',
+            onclick: handleChange
         }, movie.watched ? "Watched": "Not Watched"),
         elm("span", {
             className: "cursor-pointer",
             "data-id": i,
-            className: "text-2xl font-bold text-red-600"
+            className: "text-2xl font-bold text-red-600",
+            onclick: deleteMovie
         }, "X"));
         
         let check = li.querySelector('button');
         let close = li.querySelector('span');
-        check.addEventListener("click", handleChange);
-        close.addEventListener('click', deleteMovie);
         movie_list.append(li);
     });
     
