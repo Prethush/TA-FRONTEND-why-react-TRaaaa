@@ -27,26 +27,26 @@
 };
 
 let months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-       let elements = <>
+       let elements = 
             <div className="relative bg-white">
                 <img src={cardInfo.imageURL} className="h-72" alt="img"/> 
-                <div class="w-16 h-16 text-white font-bold absolute bg-red-400 rounded-full right-8 top-8 flex flex-col justify-center items-center">
+                <div className="w-16 h-16 text-white font-bold absolute bg-red-400 rounded-full right-8 top-8 flex flex-col justify-center items-center">
                     <span>{cardInfo.date.getDay()}</span>
                     <span>{months[cardInfo.date.getMonth()]}</span>
                     </div>
-                <div class="w-28 h-12 text-white font-bold absolute bg-red-400 top-60 flex flex-col justify-center items-center">
+                <div className="w-28 h-12 text-white font-bold absolute bg-red-400 top-60 flex flex-col justify-center items-center">
                     <span>{cardInfo.category.toUpperCase()}</span>
                 </div>
-                <h1 class="text-4xl font-bold text-custom text-left p-4 mt-2">{cardInfo.title}</h1>
-                <h3 class="text-red-500 text-3xl text-left px-4">{cardInfo.subTitle}</h3>
-                <p class="text-left  text-custom  p-4">{cardInfo.description}</p>
+                <h1 className="text-4xl font-bold text-custom text-left p-4 mt-2">{cardInfo.title}</h1>
+                <h3 className="text-red-500 text-3xl text-left px-4">{cardInfo.subTitle}</h3>
+                <p className="text-left  text-custom  p-4">{cardInfo.description}</p>
                 <>
-                <span class="px-4 inline-block pb-4 text-custom"><i class="fas fa-history mr-2"></i>6 mins ago</span> 
-                <span class="text-custom ml-4"><i class="fas fa-comments mr-2"></i>39 Comments</span>
+                <span className="px-4 inline-block pb-4 text-custom"><i className="fas fa-history mr-2"></i>6 mins ago</span> 
+                <span className="text-custom ml-4"><i className="fas fa-comments mr-2"></i>{cardInfo.comments + " comments"}</span>
                 </>
             </div>
             
-       </>
+       
 
        ReactDOM.render(elements, document.querySelector('.container'));
     </script>
