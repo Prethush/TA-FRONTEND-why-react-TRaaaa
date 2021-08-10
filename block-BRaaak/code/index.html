@@ -55,8 +55,9 @@
 ];
 
 let months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-       let Article = (props) => { 
-        console.log(props);
+
+       function Article(props) { 
+        
         return (
 
             <div className="p-4  mx-2 flex-33">
@@ -83,12 +84,10 @@ let months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OC
         
         };
 
-        let Articles = (articles) => {
+        function Articles(articles) {
             
-            return (
-                articles.map(article => {
-                    return (
-                    <Article 
+            return articles.map(article => {
+                    return <Article 
                         imageURL={article.imageURL}
                         date = {article.date}
                        category = {article.category}
@@ -97,9 +96,9 @@ let months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OC
                        description = {article.description}
                         comments = {article.comments}
                     />
-                    );
+                    
                 })
-            )
+            
         };
 
        ReactDOM.render(Articles(articles), document.querySelector('.container'));
