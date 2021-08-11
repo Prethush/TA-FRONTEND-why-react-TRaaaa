@@ -38,7 +38,9 @@ Article.propTypes = {
     title: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
-    publishedAt: PropTypes.string.isRequired
+    publishedAt: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired
 }
 
 
