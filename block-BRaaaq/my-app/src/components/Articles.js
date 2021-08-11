@@ -1,4 +1,5 @@
 import articles from '../data.js';
+import PropTypes from 'prop-types';
 
 import '../styles/style.css';
 
@@ -31,5 +32,14 @@ function Article(props) {
         </article>
     )
 }
+
+Article.propTypes = {
+    urlToImage: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    publishedAt: PropTypes.string.isRequired
+}
+
 
 export default Articles;
