@@ -3,26 +3,21 @@ import '../styles/style.css';
 import PropTypes from 'prop-types';
 
 function App() {
-    function handleClick(){
-        alert("Hello React Event");
-    }
-
+   
     function handleChange(){
         alert("To learn React use https://reactjs.org");
         alert("React and ReactDOM works together");
         alert(" Babel helps in writing JSX");
     }
 
-    function handleName(name){
-        alert(`Hello ${name}`)
-    }
+    let names = ["Arya", "Bran", "James"];
     return (
         <>
-            <button className="bg-red-500 rounded-lg p-2 text-white" onClick={handleClick}>Click Me</button>
+            <button className="bg-red-500 rounded-lg p-2 text-white" onClick={() => alert("Hello React Event")}>Click Me</button>
             <button className="bg-red-500 rounded-lg p-2 ml-8 text-white" onClick={handleChange}>How Can I Help You</button>
-            <button className="bg-red-500 rounded-lg p-2 ml-8 text-white" onClick={() => handleName("Arya")}>Arya</button>
-            <button className="bg-red-500 rounded-lg p-2 ml-8 text-white" onClick={() => handleName("John")}>John</button>
-            <button className="bg-red-500 rounded-lg p-2 ml-8 text-white" onClick={() => handleName("Bran")}>Bran</button>
+            {
+                names.map(name => <button className="bg-red-500 rounded-lg p-2 ml-8 text-white" onClick={() => alert(`Hello ${name}`)} key={name}>{name}</button>)
+            }
             {
                 datas.map(data => < Key key= {data.id} {...data}/>)
             }
@@ -32,11 +27,9 @@ function App() {
 }
 
 function Key(props) {
-    function handleName(name){
-        alert(`Hello ${name}`)
-    }
+    
     return (
-        <button className="bg-red-500 rounded-lg p-2 ml-8 text-white" onClick={() => handleName(props.value)}>{props.value}</button>
+        <button className="bg-red-500 rounded-lg p-2 ml-8 text-white" onClick={() => alert(props.value)}>{props.value}</button>
     )
 }
 
