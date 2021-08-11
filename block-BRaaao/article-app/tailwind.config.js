@@ -11,6 +11,9 @@ module.exports = {
       },
       flex: {
         custom: "0 1 31.5%"
+      },
+      boxShadow: {
+        custom: "0px 0px 12px 8px rgba(0, 0, 0, .5)"
       }
     },
   },

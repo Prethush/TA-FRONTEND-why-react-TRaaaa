@@ -2,9 +2,9 @@ import '../styles/style.css';
 
 function Hero() {
     return (
-        <div className="my-8 flex justify-center px-12">
-            <img src="/img2.jpg" alt="img" className="h-custom w-custom rounded-lg"/>
-        </div>
+        <section className="hero mb-8 flex justify-center">
+            <img src="/img2.jpg" alt="img" className="h-custom w-full "/>
+        </section>
     )
 }
 
