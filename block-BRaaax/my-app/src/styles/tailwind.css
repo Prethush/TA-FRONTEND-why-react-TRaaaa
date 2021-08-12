@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.button-small {
+    width: 5rem;
+    background-color: aqua;
+    color: red;
+}
+
+.button-medium{
+    width: 10rem;
+    background-color: blue;
+    color: white;
+}
+
+.button-large{
+    width: 15rem;
+    background-color: green;
+    color: white;
+}
+
+.button-primary{
+    border: 2px solid red;
+}
+
+.button-secondary{
+    border: 2px dashed blue;
+}
+
+.button-tertiary{
+    border: 2px dotted green;
+}
+
+.button {
+    padding: 1.25rem;
+    font-weight: 900;
+}
+
+.disabled {
+    background-color: yellow;
+    filter: blur(20px);
+}
