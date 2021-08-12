@@ -1,0 +1,54 @@
+body {
+  text-align: center;
+}
+#root {
+  margin-top: 4rem;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-15 {
+  flex: 0 1 15%;
+}
+
+.flex-75 {
+  flex: 0 1 75%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-16{
+  flex: 0 1 17%;
+  
+}
+
+.jcb{
+  justify-content: space-between;
+}
+.red {
+  background-color: red;
+}
+
+.width-full {
+  width: 100%;
+}
+
+.span {
+  font-weight: 500;
+}
+.span2 {
+  margin-left: 10rem;
+  display: inline-block;
+  
+}
+
+.parent {
+  margin-bottom: 1.5rem;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
