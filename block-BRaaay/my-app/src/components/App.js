@@ -1,17 +1,7 @@
-import Gray  from "./Gray";
-import Red from "./Red";
-import Yellow from './Yellow';
-import Green from './Green';
+import Colors from "./Colors";
 
 function App() {
-    return (
-        <>
-            < Gray />
-            < Red />
-            < Yellow />
-            < Green />
-        </>
-    )
+    return < Colors />
 }
 
 export default App;
